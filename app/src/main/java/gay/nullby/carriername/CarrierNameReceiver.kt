@@ -28,10 +28,11 @@ class CarrierNameReceiver : BroadcastReceiver() {
         if (subId == SubscriptionManager.INVALID_SUBSCRIPTION_ID) return
 
         try {
-            // Map the bundle parameters exactly how Bleelblep's Broker expects them
             val p = PersistableBundle().apply {
                 putBoolean(CarrierConfigManager.KEY_CARRIER_NAME_OVERRIDE_BOOL, true)
                 putString(CarrierConfigManager.KEY_CARRIER_NAME_STRING, newCarrierName)
+
+                putString("sem_vowifi_opname_string", newCarrierName)
             }
 
             val am = IActivityManager.Stub.asInterface(

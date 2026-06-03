@@ -104,6 +104,7 @@ class TargetFragment : Fragment() {
         p.putString(CarrierConfigManager.KEY_CARRIER_NAME_STRING, text)
         p.putString(CarrierConfigManager.KEY_CARRIER_CONFIG_VERSION_STRING, /* trans rights! 🏳️‍⚧️*/ ":3")
         p.putBoolean(CarrierConfigManager.KEY_CARRIER_VOLTE_AVAILABLE_BOOL, true)
+        p.putString("sem_vowifi_opname_string", text)
 
         val subId: Int;
         if (selectedSub == 1) {
@@ -118,6 +119,7 @@ class TargetFragment : Fragment() {
         var p = PersistableBundle();
         p.putBoolean(CarrierConfigManager.KEY_CARRIER_NAME_OVERRIDE_BOOL, false)
         p.putString(CarrierConfigManager.KEY_CARRIER_NAME_STRING, "")
+        p.putString("sem_vowifi_opname_string", "")
         val subId: Int;
         if (selectedSub == 1) {
             subId = subId1!!
